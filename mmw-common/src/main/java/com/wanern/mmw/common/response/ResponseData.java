@@ -5,4 +5,5 @@ package com.wanern.mmw.common.response;
  * Created by Ale on 2022/8/9
  */
 public class ResponseData {
+
 }
