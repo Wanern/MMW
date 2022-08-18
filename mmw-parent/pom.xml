@@ -24,6 +24,9 @@
         <mybatis-plus.version>3.4.2</mybatis-plus.version>
         <servlet.version>3.1.0</servlet.version>
         <lombok.version>1.18.18</lombok.version>
+        <fastjson.version>1.2.83</fastjson.version>
+        <common-lang3.version>3.12.0</common-lang3.version>
+        <validation-api.version>2.0.1.Final</validation-api.version>
     </properties>
 
 
@@ -53,11 +56,31 @@
                 <version>${mybatis-plus.version}</version>
             </dependency>
 
-
+            <!-- lombok -->
             <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <version>${lombok.version}</version>
+            </dependency>
+
+            <!-- fastjson  -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${common-lang3.version}</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>javax.validation</groupId>
+                <artifactId>validation-api</artifactId>
+                <version>${validation-api.version}</version>
             </dependency>
 
         </dependencies>

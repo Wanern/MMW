@@ -5,8 +5,8 @@ import java.util.Map;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.wanern.common.utils.PageUtils;
-import com.wanern.common.utils.Query;
+import com.wanern.mmw.common.utils.PageUtils;
+import com.wanern.mmw.common.utils.Query;
 
 import com.wanern.mmw.product.dao.SpuInfoDao;
 import com.wanern.mmw.product.entity.SpuInfoEntity;
