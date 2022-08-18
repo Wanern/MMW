@@ -1,7 +1,7 @@
 package com.wanern.mmw.product.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.wanern.common.utils.PageUtils;
+import com.wanern.mmw.common.utils.PageUtils;
 import com.wanern.mmw.product.entity.SpuCommentEntity;
 
 import java.util.Map;

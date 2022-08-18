@@ -34,7 +34,6 @@ public class AttrAttrgroupRelationController {
     @RequestMapping("/list")
     public R list(@RequestParam Map<String, Object> params) {
         PageUtils page = attrAttrgroupRelationService.queryPage(params);
-
         return R.ok().put("page", page);
     }
 
@@ -45,7 +44,6 @@ public class AttrAttrgroupRelationController {
     @RequestMapping("/info/{id}")
     public R info(@PathVariable("id") Long id) {
         AttrAttrgroupRelationEntity attrAttrgroupRelation = attrAttrgroupRelationService.getById(id);
-
         return R.ok().put("attrAttrgroupRelation", attrAttrgroupRelation);
     }
 
@@ -55,7 +53,6 @@ public class AttrAttrgroupRelationController {
     @RequestMapping("/save")
     public R save(@RequestBody AttrAttrgroupRelationEntity attrAttrgroupRelation) {
         attrAttrgroupRelationService.save(attrAttrgroupRelation);
-
         return R.ok();
     }
 
@@ -65,7 +62,6 @@ public class AttrAttrgroupRelationController {
     @RequestMapping("/update")
     public R update(@RequestBody AttrAttrgroupRelationEntity attrAttrgroupRelation) {
         attrAttrgroupRelationService.updateById(attrAttrgroupRelation);
-
         return R.ok();
     }
 
@@ -75,7 +71,6 @@ public class AttrAttrgroupRelationController {
     @RequestMapping("/delete")
     public R delete(@RequestBody Long[] ids) {
         attrAttrgroupRelationService.removeByIds(Arrays.asList(ids));
-
         return R.ok();
     }
 

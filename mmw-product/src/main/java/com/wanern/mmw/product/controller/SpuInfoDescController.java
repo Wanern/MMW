@@ -3,7 +3,8 @@ package com.wanern.mmw.product.controller;
 import java.util.Arrays;
 import java.util.Map;
 
-import org.apache.shiro.authz.annotation.RequiresPermissions;
+import com.wanern.mmw.common.utils.PageUtils;
+import com.wanern.mmw.common.utils.R;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -13,8 +14,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.wanern.mmw.product.entity.SpuInfoDescEntity;
 import com.wanern.mmw.product.service.SpuInfoDescService;
-import com.wanern.common.utils.PageUtils;
-import com.wanern.common.utils.R;
 
 
 /**
