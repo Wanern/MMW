@@ -8,10 +8,9 @@ import java.util.Map;
 
 /**
  * 属性&属性分组关联
- *
  * @author Ale
  * @email qingchenorg@163.com
- * @date 2022-08-10 16:30:29
+ * @date 2022-08-23 14:31:12
  */
 public interface AttrAttrgroupRelationService extends IService<AttrAttrgroupRelationEntity> {
 

@@ -3,8 +3,6 @@ package com.wanern.mmw.product.controller;
 import java.util.Arrays;
 import java.util.Map;
 
-import com.wanern.mmw.common.utils.PageUtils;
-import com.wanern.mmw.common.utils.R;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -14,13 +12,15 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.wanern.mmw.product.entity.SpuImagesEntity;
 import com.wanern.mmw.product.service.SpuImagesService;
+import com.wanern.mmw.common.utils.PageUtils;
+import com.wanern.mmw.common.utils.R;
 
 
 /**
  * spu图片
  * @author Ale
  * @email qingchenorg@163.com
- * @date 2022-08-10 16:30:28
+ * @date 2022-08-23 14:31:11
  */
 @RestController
 @RequestMapping("product/spuimages")

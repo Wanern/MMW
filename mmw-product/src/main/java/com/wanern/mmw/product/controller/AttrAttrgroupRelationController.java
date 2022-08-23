@@ -20,7 +20,7 @@ import com.wanern.mmw.common.utils.R;
  * 属性&属性分组关联
  * @author Ale
  * @email qingchenorg@163.com
- * @date 2022-08-10 16:30:29
+ * @date 2022-08-23 14:31:12
  */
 @RestController
 @RequestMapping("product/attrattrgrouprelation")
@@ -44,6 +44,7 @@ public class AttrAttrgroupRelationController {
     @RequestMapping("/info/{id}")
     public R info(@PathVariable("id") Long id) {
         AttrAttrgroupRelationEntity attrAttrgroupRelation = attrAttrgroupRelationService.getById(id);
+
         return R.ok().put("attrAttrgroupRelation", attrAttrgroupRelation);
     }
 
@@ -53,6 +54,7 @@ public class AttrAttrgroupRelationController {
     @RequestMapping("/save")
     public R save(@RequestBody AttrAttrgroupRelationEntity attrAttrgroupRelation) {
         attrAttrgroupRelationService.save(attrAttrgroupRelation);
+
         return R.ok();
     }
 
@@ -62,6 +64,7 @@ public class AttrAttrgroupRelationController {
     @RequestMapping("/update")
     public R update(@RequestBody AttrAttrgroupRelationEntity attrAttrgroupRelation) {
         attrAttrgroupRelationService.updateById(attrAttrgroupRelation);
+
         return R.ok();
     }
 
@@ -71,6 +74,7 @@ public class AttrAttrgroupRelationController {
     @RequestMapping("/delete")
     public R delete(@RequestBody Long[] ids) {
         attrAttrgroupRelationService.removeByIds(Arrays.asList(ids));
+
         return R.ok();
     }
 

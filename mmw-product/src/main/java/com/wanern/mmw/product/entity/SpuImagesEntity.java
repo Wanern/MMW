@@ -2,16 +2,17 @@ package com.wanern.mmw.product.entity;
 
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
-import lombok.Data;
 
 import java.io.Serializable;
+import java.time.LocalDateTime;
+import lombok.Data;
 
 /**
  * spu图片
  * 
  * @author Ale
  * @email qingchenorg@163.com
- * @date 2022-08-10 16:30:28
+ * @date 2022-08-23 14:31:11
  */
 @Data
 @TableName("pms_spu_images")

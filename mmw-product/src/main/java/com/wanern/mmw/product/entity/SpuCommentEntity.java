@@ -2,17 +2,17 @@ package com.wanern.mmw.product.entity;
 
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
-import lombok.Data;
 
 import java.io.Serializable;
-import java.util.Date;
+import java.time.LocalDateTime;
+import lombok.Data;
 
 /**
  * 商品评价
  * 
  * @author Ale
  * @email qingchenorg@163.com
- * @date 2022-08-10 16:30:28
+ * @date 2022-08-23 14:31:11
  */
 @Data
 @TableName("pms_spu_comment")
@@ -51,7 +51,7 @@ public class SpuCommentEntity implements Serializable {
 	/**
 	 * 创建时间
 	 */
-	private Date createTime;
+	private LocalDateTime createTime;
 	/**
 	 * 显示状态[0-不显示，1-显示]
 	 */

@@ -3,8 +3,6 @@ package com.wanern.mmw.product.controller;
 import java.util.Arrays;
 import java.util.Map;
 
-import com.wanern.mmw.common.utils.PageUtils;
-import com.wanern.mmw.common.utils.R;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -14,13 +12,15 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.wanern.mmw.product.entity.AttrEntity;
 import com.wanern.mmw.product.service.AttrService;
+import com.wanern.mmw.common.utils.PageUtils;
+import com.wanern.mmw.common.utils.R;
 
 
 /**
  * 商品属性
  * @author Ale
  * @email qingchenorg@163.com
- * @date 2022-08-10 16:30:29
+ * @date 2022-08-23 14:31:12
  */
 @RestController
 @RequestMapping("product/attr")
@@ -44,6 +44,7 @@ public class AttrController {
     @RequestMapping("/info/{attrId}")
     public R info(@PathVariable("attrId") Long attrId) {
         AttrEntity attr = attrService.getById(attrId);
+
         return R.ok().put("attr", attr);
     }
 
@@ -53,6 +54,7 @@ public class AttrController {
     @RequestMapping("/save")
     public R save(@RequestBody AttrEntity attr) {
         attrService.save(attr);
+
         return R.ok();
     }
 
@@ -62,6 +64,7 @@ public class AttrController {
     @RequestMapping("/update")
     public R update(@RequestBody AttrEntity attr) {
         attrService.updateById(attr);
+
         return R.ok();
     }
 
@@ -71,6 +74,7 @@ public class AttrController {
     @RequestMapping("/delete")
     public R delete(@RequestBody Long[] attrIds) {
         attrService.removeByIds(Arrays.asList(attrIds));
+
         return R.ok();
     }
 

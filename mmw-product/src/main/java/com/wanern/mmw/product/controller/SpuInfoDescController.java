@@ -3,8 +3,6 @@ package com.wanern.mmw.product.controller;
 import java.util.Arrays;
 import java.util.Map;
 
-import com.wanern.mmw.common.utils.PageUtils;
-import com.wanern.mmw.common.utils.R;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -14,13 +12,15 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.wanern.mmw.product.entity.SpuInfoDescEntity;
 import com.wanern.mmw.product.service.SpuInfoDescService;
+import com.wanern.mmw.common.utils.PageUtils;
+import com.wanern.mmw.common.utils.R;
 
 
 /**
  * spu信息介绍
  * @author Ale
  * @email qingchenorg@163.com
- * @date 2022-08-10 16:30:29
+ * @date 2022-08-23 14:31:12
  */
 @RestController
 @RequestMapping("product/spuinfodesc")
@@ -44,6 +44,7 @@ public class SpuInfoDescController {
     @RequestMapping("/info/{spuId}")
     public R info(@PathVariable("spuId") Long spuId) {
         SpuInfoDescEntity spuInfoDesc = spuInfoDescService.getById(spuId);
+
         return R.ok().put("spuInfoDesc", spuInfoDesc);
     }
 
@@ -53,6 +54,7 @@ public class SpuInfoDescController {
     @RequestMapping("/save")
     public R save(@RequestBody SpuInfoDescEntity spuInfoDesc) {
         spuInfoDescService.save(spuInfoDesc);
+
         return R.ok();
     }
 
@@ -62,6 +64,7 @@ public class SpuInfoDescController {
     @RequestMapping("/update")
     public R update(@RequestBody SpuInfoDescEntity spuInfoDesc) {
         spuInfoDescService.updateById(spuInfoDesc);
+
         return R.ok();
     }
 
@@ -71,6 +74,7 @@ public class SpuInfoDescController {
     @RequestMapping("/delete")
     public R delete(@RequestBody Long[] spuIds) {
         spuInfoDescService.removeByIds(Arrays.asList(spuIds));
+
         return R.ok();
     }
 

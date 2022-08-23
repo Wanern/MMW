@@ -3,8 +3,6 @@ package com.wanern.mmw.product.controller;
 import java.util.Arrays;
 import java.util.Map;
 
-import com.wanern.mmw.common.utils.PageUtils;
-import com.wanern.mmw.common.utils.R;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -14,12 +12,15 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.wanern.mmw.product.entity.SpuInfoEntity;
 import com.wanern.mmw.product.service.SpuInfoService;
+import com.wanern.mmw.common.utils.PageUtils;
+import com.wanern.mmw.common.utils.R;
+
 
 /**
  * spu信息
  * @author Ale
  * @email qingchenorg@163.com
- * @date 2022-08-10 16:30:28
+ * @date 2022-08-23 14:31:11
  */
 @RestController
 @RequestMapping("product/spuinfo")
@@ -43,6 +44,7 @@ public class SpuInfoController {
     @RequestMapping("/info/{id}")
     public R info(@PathVariable("id") Long id) {
         SpuInfoEntity spuInfo = spuInfoService.getById(id);
+
         return R.ok().put("spuInfo", spuInfo);
     }
 
@@ -52,6 +54,7 @@ public class SpuInfoController {
     @RequestMapping("/save")
     public R save(@RequestBody SpuInfoEntity spuInfo) {
         spuInfoService.save(spuInfo);
+
         return R.ok();
     }
 
@@ -61,6 +64,7 @@ public class SpuInfoController {
     @RequestMapping("/update")
     public R update(@RequestBody SpuInfoEntity spuInfo) {
         spuInfoService.updateById(spuInfo);
+
         return R.ok();
     }
 
@@ -70,6 +74,7 @@ public class SpuInfoController {
     @RequestMapping("/delete")
     public R delete(@RequestBody Long[] ids) {
         spuInfoService.removeByIds(Arrays.asList(ids));
+
         return R.ok();
     }
 
