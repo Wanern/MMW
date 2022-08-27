@@ -1,9 +1,14 @@
-server:
-  port: 8400
-
-spring:
-  profiles:
-    active: dev
-  jackson:
-    date-format: yyyy-MM-dd HH:mm:ss
-    time-zone: GMT+8
+#server:
+#  port: 8400
+#
+#spring:
+#  profiles:
+#    active: dev
+#  jackson:
+#    date-format: yyyy-MM-dd HH:mm:ss
+#    time-zone: GMT+8
+#
+#member:
+#  user:
+#    name: zhangsan
+#    age: 18

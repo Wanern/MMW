@@ -1,31 +1,31 @@
-spring:
-  datasource:
-    username: root
-    password: Azhen1997
-    url: jdbc:mysql://rm-bp11528obl842oc3qko.mysql.rds.aliyuncs.com/mmw_ums?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&serverTimezone=GMT%2B8&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull
-    driver-class-name: com.mysql.cj.jdbc.Driver
-  jackson:
-    date-format: yyyy-MM-dd HH:mm:ss
-
-  application:
-    name: mmw-member-service
-  cloud:
-    nacos:
-      discovery:
-        server-addr: 127.0.0.1:8848
-
-
-mybatis-plus:
-  mapper-locations: classpath:/mapper/**/*.xml
-  global-config:
-    db-config:
-      id-type: auto
-      logic-delete-value: 1
-      logic-not-delete-value: 0
-
-
-
-logging:
-  level:
-    com.atguigu.gulimall: debug
-
+#spring:
+#  datasource:
+#    username: root
+#    password: Azhen1997
+#    url: jdbc:mysql://rm-bp11528obl842oc3qko.mysql.rds.aliyuncs.com/mmw_ums?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&serverTimezone=GMT%2B8&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#  jackson:
+#    date-format: yyyy-MM-dd HH:mm:ss
+#
+#  application:
+#    name: mmw-member-service
+#  cloud:
+#    nacos:
+#      discovery:
+#        server-addr: 127.0.0.1:8848
+#
+#
+#mybatis-plus:
+#  mapper-locations: classpath:/mapper/**/*.xml
+#  global-config:
+#    db-config:
+#      id-type: auto
+#      logic-delete-value: 1
+#      logic-not-delete-value: 0
+#
+#
+#
+#logging:
+#  level:
+#    com.atguigu.gulimall: debug
+#

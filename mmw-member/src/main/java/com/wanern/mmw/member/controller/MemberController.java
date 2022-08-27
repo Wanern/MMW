@@ -5,6 +5,8 @@ import java.util.Map;
 
 import com.wanern.mmw.member.feign.CouponFeignService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,6 +28,7 @@ import javax.annotation.Resource;
  * @email qingchenorg@163.com
  * @date 2022-08-23 14:14:43
  */
+@RefreshScope
 @RestController
 @RequestMapping("member/member")
 public class MemberController {
@@ -34,6 +37,19 @@ public class MemberController {
 
     @Resource
     private CouponFeignService couponFeignService;
+
+
+    @Value("${member.user.name}")
+    private String name;
+
+    @Value("${member.user.age}")
+    private Integer age;
+
+
+    @RequestMapping(value = "/test", method = RequestMethod.GET)
+    public R test1() {
+        return R.ok().put("name", name).put("age", age);
+    }
 
 
     @RequestMapping(value = "/test/{id}", method = RequestMethod.GET)
