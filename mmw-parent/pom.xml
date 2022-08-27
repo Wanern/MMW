@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.2.2.RELEASE</version>
+        <version>2.1.8.RELEASE</version>
         <relativePath/>
     </parent>
 
@@ -27,12 +27,37 @@
         <fastjson.version>1.2.83</fastjson.version>
         <common-lang3.version>3.12.0</common-lang3.version>
         <validation-api.version>2.0.1.Final</validation-api.version>
+        <cloud-alibaba.version>2.1.0.RELEASE</cloud-alibaba.version>
+        <spring-cloud.version>Greenwich.SR3</spring-cloud.version>
     </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-alibaba-nacos-discovery</artifactId>
+        </dependency>
+    </dependencies>
 
 
     <!-- 依赖管理 -->
     <dependencyManagement>
         <dependencies>
+
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${cloud-alibaba.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
 
             <!-- servlet -->
             <dependency>

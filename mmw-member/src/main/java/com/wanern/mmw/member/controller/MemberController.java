@@ -3,10 +3,12 @@ package com.wanern.mmw.member.controller;
 import java.util.Arrays;
 import java.util.Map;
 
+import com.wanern.mmw.member.feign.CouponFeignService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -14,6 +16,8 @@ import com.wanern.mmw.member.entity.MemberEntity;
 import com.wanern.mmw.member.service.MemberService;
 import com.wanern.mmw.common.utils.PageUtils;
 import com.wanern.mmw.common.utils.R;
+
+import javax.annotation.Resource;
 
 
 /**
@@ -27,6 +31,15 @@ import com.wanern.mmw.common.utils.R;
 public class MemberController {
     @Autowired
     private MemberService memberService;
+
+    @Resource
+    private CouponFeignService couponFeignService;
+
+
+    @RequestMapping(value = "/test/{id}", method = RequestMethod.GET)
+    public R test(@PathVariable long id) {
+        return couponFeignService.memberCouponList(id);
+    }
 
     /**
      * 列表

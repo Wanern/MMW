@@ -1,12 +1,15 @@
 package com.wanern.mmw.coupon.controller;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -27,6 +30,16 @@ import com.wanern.mmw.common.utils.R;
 public class CouponController {
     @Autowired
     private CouponService couponService;
+
+
+    @RequestMapping(value = "/member/coupon/list/{id}", method = RequestMethod.GET)
+    public R memberCouponList(@PathVariable long id) {
+        Map<String, Object> result = new HashMap<>();
+        CouponEntity couponEntity = new CouponEntity();
+        couponEntity.setCouponName("满100减5");
+        result.put("list",Arrays.asList(couponEntity));
+        return R.ok(result);
+    }
 
     /**
      * 列表
