@@ -19,6 +19,7 @@
         <module>mmw-ware</module>
         <module>mmw-common</module>
         <module>mmw-parent</module>
+        <module>mmw-gateway</module>
         <module>renren-fast</module>
         <module>renren-generator</module>
     </modules>

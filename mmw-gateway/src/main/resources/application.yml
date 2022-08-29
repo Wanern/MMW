@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: mmw-gateway-service
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+
+    gateway:
+      routes:
+        - id: baidu_test
+          uri: https://www.baidu.com
+          predicates:
+            - Query=t,baidu
+
+        - id: qq_test
+          uri: https://www.qq.com
+          predicates:
+            - Query=t,qq
